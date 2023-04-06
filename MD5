@@ -1,12 +1,12 @@
-fffe6f09f31efbae3e4fe7c4cf407f56 *DESCRIPTION
+fc758b0b54538e6f295a944cf6ef912c *DESCRIPTION
 b6fe8f9d6ee1e810deca95c44d4098ba *NAMESPACE
 1067c5ff9a9971ad0a2c30e3f81bcd5f *R/CPX_matrix.R
 fd00e695e7620866fa6f8372831e2ad0 *R/Rcplex.R
 872ecf5432a5f8d2694099bfa8700dd7 *R/control.R
-e490c47f6020c313e901cfc1199411d1 *R/quadratic_constraint.R
+5120882ee077de244848c85fe444d0f3 *R/quadratic_constraint.R
 86c483fdeea195c60372773c9aace32a *cleanup
-fef61671a9729e388a90c438902608a0 *configure
-338f486948b1f7505025c7068970dd91 *configure.ac
+2d98ea1d035f75b7a31eb7d4163b65d7 *configure
+9f80d96a1bc8c8279694907630eaccee *configure.ac
 d41d8cd98f00b204e9800998ecf8427e *configure.win
 093b59143af55577a9f07ade93edc9cf *inst/INSTALL
 e3b92511182b5ecaed801e707e5cf264 *inst/NEWS

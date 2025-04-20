@@ -1,4 +1,4 @@
-fc758b0b54538e6f295a944cf6ef912c *DESCRIPTION
+a0f83a78322daddd36c9ad1cb8cf8854 *DESCRIPTION
 b6fe8f9d6ee1e810deca95c44d4098ba *NAMESPACE
 1067c5ff9a9971ad0a2c30e3f81bcd5f *R/CPX_matrix.R
 fd00e695e7620866fa6f8372831e2ad0 *R/Rcplex.R
@@ -6,10 +6,10 @@ fd00e695e7620866fa6f8372831e2ad0 *R/Rcplex.R
 5120882ee077de244848c85fe444d0f3 *R/quadratic_constraint.R
 86c483fdeea195c60372773c9aace32a *cleanup
 2d98ea1d035f75b7a31eb7d4163b65d7 *configure
-9f80d96a1bc8c8279694907630eaccee *configure.ac
+5f6493ffa09d19350d3ca946b52cb2f5 *configure.ac
 d41d8cd98f00b204e9800998ecf8427e *configure.win
 093b59143af55577a9f07ade93edc9cf *inst/INSTALL
-e3b92511182b5ecaed801e707e5cf264 *inst/NEWS
+1881dcdaf4e2e7aaabdfc1f38dd1ccd0 *inst/NEWS
 98331e5cb4aa8305741ea9dbeb80c3cf *inst/README
 c56429ddde78268f691e4b1a64c407e8 *man/Rcplex.Rd
 71efa1ca4db6e7915a3586f3e6877b36 *man/Rcplex.close.Rd
@@ -18,7 +18,7 @@ e4cff70c399a10f65c797ddb9bfc2f65 *src/Makevars.in
 9019763e3708f60495334d1bc180bf66 *src/Makevars.win
 835f4d8f2cf92c51c23b20aec8ab7380 *src/Rcplex.c
 f53cdca7f0a2ea5586732d48d1395a39 *src/Rcplex.h
-c6c88b75a7e07b37d4ce2292b96c2413 *src/Rcplex_QCP.c
+981f1163c2aff05aa6de18419aac9bff *src/Rcplex_QCP.c
 c1a4cde5dac1fe5e203e88efc2e119d5 *src/Rcplex_params.c
 91dce3b747173735dcdcbfd6801c9b3c *src/Rcplex_utils.c
 025776b8305551184f7ef3db84b7ba77 *src/init.c

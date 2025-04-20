@@ -32,10 +32,10 @@ AC_INIT([Rcplex], [0.3.6])
 FOUND_ALL="no"
 
 dnl Check if global variables are already set, if so we are done
-if test [-n "$PKG_CPPFLAGS" -a -n "$PKG_LIBS"] ; then
+if test [-n "$PKG_CPPFLAGS"] &&  test [-n "$PKG_LIBS"] ; then
    FOUND_ALL="yes"
 else
-   if test [-n "$PKG_CPPFLAGS" -o -n "$PKG_LIBS"] ; then
+   if test [-n "$PKG_CPPFLAGS"] || test [-n "$PKG_LIBS"] ; then
       AC_MSG_ERROR([All three of PKG_CFLAGS, PKG_CPPFLAGS and PKG_LIBS must be given together])
    fi
 fi
@@ -63,7 +63,7 @@ AC_ARG_WITH([cplex-dir],
 
 dnl Check if include flags and libs given using --with arguments
 if test ["$FOUND_ALL"="no"] ; then
-   if test [-n "$CPLEX_INCLUDE" -a -n "$CPLEX_LIB" ] ; then
+   if test [-n "$CPLEX_INCLUDE"] && test [-n "$CPLEX_LIB"] ; then
       if test [! -d "$CPLEX_INCLUDE"] ; then
 	 AC_MSG_ERROR([CPLEX include directory $CPLEX_INCLUDE does not exist])
       fi
@@ -79,14 +79,14 @@ dnl      fi
       PKG_LIBS="$CPLEX_LIB"
       FOUND_ALL="yes"
    else
-      if test [-n "$CPLEX_INCLUDE" -o -n "$CPLEX_LIBS" ] ; then
+      if test [-n "$CPLEX_INCLUDE"] || test [-n "$CPLEX_LIBS"] ; then
 	 AC_MSG_ERROR([All options --with-cplex-include, --with-cplex-cflags and --with-cplex-lib must be given together])
       fi
    fi
 fi
 
 dnl No information given try to guess it from location of interactive optimizer
-if test ["$FOUND_ALL" = "no" -a -z "$CPLEX_DIR"] ; then
+if test ["$FOUND_ALL" = "no"] && test [-z "$CPLEX_DIR"] ; then
    AC_PATH_PROG(CPLEX_BIN, cplex)
    CPLEX_DIR=`AS_DIRNAME(["$CPLEX_BIN"])`
    ## Autoconf docs say that basename is not portable and one should use
@@ -116,7 +116,7 @@ if test ["$FOUND_ALL" = "no"] ; then
 
    ## Guess libformat: just grab the first that comes up.
    LIBFORMAT=`ls -l ${CPLEX_DIR}/lib/${SYSTEM} | awk '($1 ~ /d/) {print $NF}' | head -n1 `
-   if test [-z "$LIBFORMAT" -a ! -d "${CPLEX_DIR}/lib/${SYSTEM}/${LIBFORMAT}"] ; then
+   if test [-z "$LIBFORMAT"] && ! test[-d "${CPLEX_DIR}/lib/${SYSTEM}/${LIBFORMAT}"] ; then
       AC_MSG_ERROR([CPLEX library location could not be found])
    fi
 
@@ -170,7 +170,7 @@ CFLAGS="${CFLAGS} ${PKG_CFLAGS}"
 CPPFLAGS="${CPPFLAGS} ${PKG_CPPFLAGS}"
 
 AC_CHECK_HEADER(ilcplex/cplex.h)
-if test "${ac_cv_header_ilcplex_cplex_h}" == no; then
+if test "${ac_cv_header_ilcplex_cplex_h}" = no; then
    AC_MSG_ERROR([CPLEX header cplex.h not found]);
 fi
 
